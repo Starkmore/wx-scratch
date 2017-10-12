@@ -1,0 +1,56 @@
+<!--service-order-buy.wxml-->
+
+<template name="service-order-buy">
+
+  <view class="dg_box" data-serviceid="{{provide_id}}" data-orderid="{{provide_ordered_id}}" data-type="1" bindtap="provideDetail">
+    <view class="dg_box_header">
+      <image src="{{user_avatar}}"></image>
+      <image src="../../common/img/cert.png" class="cert_icon"></image>
+      <view class="dg_box_name">
+        <text>{{user_name}}</text>
+        <text class="iconfont {{user_male == 1 ? 'icon-nan c-blue' : 'icon-nv c-red'}}"></text>
+      </view>
+    </view>
+    <view class="dg_box_detail">
+      <view class="dg_box_title">
+        <view>
+          <text class="dg_box_title_text">{{provide_name}}</text>
+        </view>
+        <view class="c-blue f-13">{{provide_state_str}}</view>
+      </view>
+      <view class="dg_box_tags">
+        <text class="dg_box_tag">{{attr_value}}</text>
+      </view>
+      <view class="dg_box_footer">
+        <view class="dg_box_time c-888 f-12">
+          <view>
+            <image src="../../common/img/newprice.png" style="width:26rpx;height:26rpx;margin-right:8rpx;margin-bottom:-4rpx;"></image>
+            <text>价格：</text>
+            <text class="c-35">¥{{price}}</text>
+          </view>
+          <view>
+            <image src="../../common/img/s_loc.png" style="width:26rpx;height:30rpx;margin-right:8rpx;margin-bottom:-4rpx;"></image>
+            <text>服务地址：</text>
+            <text class="c-35">{{provide_loc}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="dg_box_bottom_copy"></view>
+  <view class="dg_pub_service_btn">
+    <view class="dg_box_contact">
+      <view data-phone="{{user_phone}}" catchtap="contact" class="iconfont icon-phone-link c-blue" style="font-size:50rpx"></view>
+    </view>
+    <view class="dg_box_service_btn f-13">
+      <text wx:if="{{ordered_state == 1}}" data-id="{{provide_ordered_id}}" data-state="{{ordered_state}}" bindtap="handleBuy" class="f-13">取消订单</text>
+      <text wx:if="{{ordered_state == 5||ordered_state == 6}}" data-id="{{provide_ordered_id}}" data-state="{{ordered_state}}" bindtap="handleBuy" class="f-13">确认完成</text>
+      <text wx:if="{{ordered_state == 3}}" data-id="{{provide_ordered_id}}" data-state="{{ordered_state}}" data-type="2" bindtap="handleBuy" class="f-13 mr-15">取消订单</text>
+
+      <picker wx:if="{{ordered_state == 3&&coupon_array.length > 1}}" bindchange="couponChange" data-provideid="{{provide_id}}" data-id="{{provide_ordered_id}}"  value="{{coupon_index}}" range="{{coupon_array}}">
+        <text class="f-13">确认支付</text>
+    </picker>
+      <text wx:if="{{ordered_state == 3&&coupon_array.length == 1}}" data-provideid="{{provide_id}}" data-id="{{provide_ordered_id}}" data-state="{{ordered_state}}" data-type="1" bindtap="handleBuy" class="f-13">确认支付</text>
+    </view>
+  </view>
+</template>

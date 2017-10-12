@@ -1,0 +1,36 @@
+/* message.wxss */
+.massage{
+     padding-top: 500rpx;
+     position: fixed;
+     width: 100%;
+     height: 100%;
+     background: rgba(0,0,0,.7);
+     top:0;
+     left: 0;
+
+}
+.massage_text{
+   margin-left:4%;  
+   width: 90%;
+}
+.massage_textarea{
+    width: 100%;
+    height: 500rpx;
+    border-radius:20rpx;
+    padding: 10rpx;
+    background: #fff;
+
+}
+.massage  button{
+     margin-top: 30rpx;
+     width: 92%;
+     background: #45A5DD;
+     color: #fff;
+     border-radius:20rpx; 
+}
+.messageShow{
+     display: block
+}
+.messageHidden{
+     display: none
+}

@@ -1,0 +1,33 @@
+<!--publish-service.wxml-->
+<template name="pub-service">
+  <view class="dg_pub_box">
+    <view class="dg_pub_box_title">
+      <view>
+        <text class="dg_pub_box_title_text">{{provide_name}}</text>
+      </view>
+      <view class="c-blue f-13">{{state_str}}</view>
+    </view>
+    <view class="dg_pub_box_tags">
+      <text class="dg_pub_box_tag">{{attr_value}}</text>
+    </view>
+    <view class="dg_pub_box_footer">
+      <view class="dg_pub_box_time c-888 f-12">
+        <view>
+          <image src="../../common/img/newprice.png" style="width:26rpx;height:26rpx;margin-right:8rpx;margin-bottom:-4rpx;"></image>
+          <text>价格：</text>
+          <text class="c-35">¥ {{price}}</text>
+        </view>
+        <view>
+          <image src="../../common/img/s_loc.png" style="width:26rpx;height:30rpx;margin-right:8rpx;margin-bottom:-4rpx;"></image>
+          <text>服务地址：</text>
+          <text class="c-35">{{building_name}}</text>
+        </view>
+      </view>
+      <view class="dg_pub_box_btn">
+        <text wx:if="{{state == 2}}" class="f-13 mr-15" data-id="{{provide_id}}" catchtap="serviceEdit">编辑</text>
+        <text class="f-13" data-id="{{provide_id}}" catchtap="serviceStop">{{btn_state}}</text>
+      </view>
+    </view>
+  </view>
+  <view class="dg_box_bottom1"></view>
+</template>

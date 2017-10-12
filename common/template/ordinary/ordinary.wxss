@@ -1,0 +1,144 @@
+/* ordinary.wxss */
+ .user_ordinary{
+   margin:20rpx;  
+   background: #fff;
+   /* border: 1px red solid; */
+   border-radius: 10rpx;
+   overflow: hidden;
+ }
+ /* .user_help{
+ } */
+ .user_admin{
+   /* border-top: 1rpx #D0D0D0 solid; */
+ }
+ .user_help,.user_admin{
+     overflow: hidden; 
+     padding: 30rpx 20rpx 10rpx 20rpx;
+} 
+
+.user_logo{
+   float: left;
+   width: 50rpx;
+   height: 50rpx;
+   /* border: 1px #D0D0D0 solid;  */
+   /* overflow: hidden; */
+   border-radius: 50rpx;
+   
+}
+.user_img{
+   width: 50rpx;
+   height: 50rpx;
+}
+.user_content{
+      float: left;
+      /* border: 1px red solid;   */
+     width:85%; 
+     margin-left: 20rpx;
+}
+.user_time{
+  font-size: 30rpx;
+  color: #6e6e6e;
+}
+.user_name{
+    width:30%;
+    /* border: 1px red solid; */
+     text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+     display: inline-block; 
+}
+.time{
+    position: relative;    
+    display: inline-block;
+}
+.user_admin_headar{
+    position: relative;
+    top:5rpx;
+}
+.icon-dianhua{
+  position: absolute;
+  top:-35rpx;
+  left: 520rpx;
+  color: #45A5DD;
+  font-size: 65rpx;
+
+}
+
+.user_problem{
+    position: fixed;
+    top:800rpx;
+    left: 75%;
+    width: 300rpx;
+    height: 100rpx;
+    /* border: 1px red solid; */
+    border-radius:100rpx; 
+    display: flex;
+    background: #45A5DD;
+    color: red;
+    z-index: 10;
+}
+.user_problem_img{
+     position: relative;
+     top: 10rpx;
+     left: 8rpx;
+     width: 80rpx;
+     height: 80rpx;
+     border-radius:80rpx;  
+     text-align: center;
+     line-height: 80rpx;
+     font-size: 40rpx;
+     background: #fff;
+     color: #F5D348
+}
+.user_problem_text{
+   position: relative;
+   top:30rpx;
+   left: 30rpx;
+   color: #fff;
+
+}
+/* .user_admin_line{
+      border-bottom: 1rpx #D0D0D0 solid;
+} */
+.user_sales_text{
+    padding: 30rpx 30rpx 0 90rpx;
+}
+.user_sales_time{
+   font-size: 26rpx;
+   color: #727272;
+}
+.user_sales_flex{
+    display: flex;
+    justify-content: space-between;
+}
+.icon-liuyan{
+   font-size: 36rpx;
+   color: #45A5DD;
+   position: relative;
+   top:-15rpx;
+}
+.user_list{
+     position: fixed;
+     height: 75rpx;
+     line-height: 75rpx;
+     top: 970rpx;
+     left: 260rpx;
+     font-size: 30rpx;
+     /* border: 1rpx  solid  red; */
+     width: 33%;
+     text-align: center;
+     border-radius:10rpx; 
+     background: #45A5DD;
+     color:#fff;
+}
+.user_intro{
+    /* border: 1px red solid; */
+    width: 104%;
+    /* padding:10rpx  20rpx  0 0   */
+}
+.user_intro2{
+    /* border: 1px red solid;   */
+    width: 104%;
+    /* padding:0rpx  20rpx  0 0  */
+}

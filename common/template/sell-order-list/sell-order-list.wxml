@@ -1,0 +1,97 @@
+<!--sell-order-list.wxml-->
+<template name="sell-order-list">
+  <view class="sell_order_box" data-order_id="{{order_id}}" bindtap="{{(send_type == 1 ) ? 'bindNavigatorBusiness' : 'bindNavigatorSince'}}">
+    <view class="sell_order_top">
+      <view class="top_header__hd"></view>
+      <view class="top_header">
+          订单号 {{order_Sn}}
+      </view>
+      <view class="top_footer c-888">
+        <text class="iconfont icon-daojishi" style="font-size: 24rpx"></text> {{order_time}}
+      </view>
+    </view>
+
+    <view class="sell_order_content">
+      <image class="sell_hd_image" src="{{seller_logo}}"></image>
+      <view class="sell__dt">
+        <view class="sell__dt_top">
+          <view class="sell_name">{{seller_Name}}</view>
+          <view class="sell_order_state c-blue">{{order_state_name}}</view>
+        </view>
+        <view class="sell__dt_goods">
+          <block wx:for="{{goods}}" wx:key="{{index}}">
+            <view class="sell_order_good">
+              <view class="good_name"><text class="order_round"></text>{{item.goods_name}}</view>
+              <view class="good_num">x{{item.goods_num}}</view>
+            <view class="good_price">¥{{item.price}}</view>
+          </view>
+          </block>
+        </view>
+        <view class="sell_order__share">
+          <view class="share_name"><text class="order_round"></text>配送费</view>
+          <view class="share_price">¥{{delivery_fee}}</view>
+        </view>
+      </view>
+    </view>
+    <view class="sell_order__ft">
+      <view class="sell_order__price">
+        <text class="iconfont icon-heji" style="color:#F77415"></text>
+        合计 ¥{{order_price}}
+      </view>
+      <!-- 自提 -->
+                <block wx:if="{{order_state == 1}}">
+                    <view class="dg_box_service_btn f-13">
+                      <text data-order_id="{{order_id}}"  catchtap="bindCancelOrder" class="f-13 mr-20">取消订单</text>
+                      <text data-order_id="{{order_id}}"  catchtap="bindGoPay" class="f-13">去支付</text>
+                    </view>
+                </block>
+
+                <block wx:if="{{order_state == 2 && send_type == 2}}">
+                    <view class="dg_box_service_btn f-13">
+                      <text data-order_id="{{order_id}}"  catchtap="bindCancelOrder" class="f-13 mr-20">取消订单</text>
+                      <text data-order_id="{{order_id}}"  catchtap="bindNeedScan" class="f-13">扫码取货</text>
+                    </view>
+                </block>
+
+                <!-- 配送 -->
+                <!-- <block wx:if="{{order_state == 1 && send_type == 1}}">
+                    <view class="dg_box_service_btn f-13">
+                      <text data-order_id="{{order_id}}"  catchtap="bindCancelOrder" class="f-13 mr-20">取消订单</text>
+                      <text data-order_id="{{order_id}}"  catchtap="bindGoPay" class="f-13">去支付</text>
+                    </view>
+                </block> -->
+
+                <block wx:if="{{order_state == 2 && send_type == 1 }}">
+                    <view class="dg_box_service_btn f-13">
+                      <text data-order_id="{{order_id}}"  catchtap="bindCancelOrder" class="f-13">取消订单</text>
+                    </view>
+                </block>
+
+                <block wx:if="{{order_state == 2 && send_type == 3 }}">
+                    <view class="dg_box_service_btn f-13">
+                      <text data-order_id="{{order_id}}" data-type="{{send_type}}"  catchtap="finishOrderFunc" class="f-13 mr-20">确认收货</text> 
+                      <text data-order_id="{{order_id}}"  catchtap="bindCancelOrder" class="f-13">取消订单</text>
+                    </view>
+                </block>
+
+                <block wx:if="{{order_state == 7 && send_type != 2}}">
+                    <view class="sell_order_call">
+                      配送员：{{send_info.auth_name}}
+                      <text data-phone="{{send_info.auth_tel}}" catchtap="contact" class="iconfont icon-phone-link c-blue ml-30" style="font-size:40rpx"></text>
+                    </view>
+                </block>
+
+                <block wx:if="{{order_state == 8}}">
+                   <view class="dg_box_service_btn f-13">
+                     <text data-order_id="{{order_id}}" data-type="{{send_type}}"  catchtap="finishOrderFunc" class="f-13">确认收货</text> 
+                  </view>  
+                </block>
+
+                <block wx:if="{{order_state == 9}}">
+                  <view class="dg_box_service_btn f-13">
+                     <text data-order_id="{{order_id}}"  catchtap="bindRedirectTo" class="f-13">再来一单</text> 
+                  </view>
+                </block>
+    </view>
+  </view>
+</template>

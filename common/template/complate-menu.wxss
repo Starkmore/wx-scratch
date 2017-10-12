@@ -1,0 +1,12 @@
+/** 目录例子，没必要管他
+===================================**/
+@import "example/example.wxss";
+
+
+@import "service-list/service-list.wxss";
+
+@import "supermarket-list/supermarket-list.wxss";
+
+@import "confirm/confirm.wxss";
+
+@import "popup-window/popup-window.wxss";

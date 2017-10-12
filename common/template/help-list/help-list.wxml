@@ -1,0 +1,51 @@
+<template name="help-item">
+    <view class="dg_box" data-needid="{{need_id}}" bindtap="helpDetail">
+      <view class="dg_box_header">
+        <image src="{{user_avatar}}"></image>
+        <image src="../../common/img/cert.png" class="cert_icon" wx:if="{{auth_state == 2}}"></image>
+        <view class="dg_box_name">
+          <text>{{user_name}}</text>
+          <text class="iconfont {{user_male == 1 ? 'icon-nan c-blue' : 'icon-nv c-red'}}"></text>
+        </view>
+      </view>
+      <view class="dg_box_detail">
+        <view class="dg_box_title">
+          <view>
+            <text class="dg_box_title_text">{{need_name}}</text>
+            <!-- <text class="official_tag" wx:if="{{need_type == 1}}">官方发布</text> -->
+          </view>
+          <view class="c-red">¥{{price}}</view>
+        </view>
+        <!-- <view class="dg_box_tags">
+          <text class="dg_box_tag">{{need_type == 1? '官方发布':'普通发布'}}</text>
+        </view> -->
+
+        <view class="dg_box_footer">
+          <view class="dg_box_time c-888" style="font-size:24rpx;line-height:28rpx;">
+            <view class="mt-15">
+              <!-- <image src="../../common/img/h_need_loc.png" style="width:26rpx;height:26rpx;margin-right:8rpx;margin-bottom:-4rpx;"></image> -->
+              <text class='iconfont icon-daojishi' style='font-size:28rpx;margin-right:8rpx;color:#33b3cf'></text>
+              <text>发布时间：</text>
+              <text class="c-35">{{dif_time}}</text>
+            </view>
+            <view class="mt-15">
+              <image src="../../common/img/h_need_loc.png" style="width:26rpx;height:26rpx;margin-right:8rpx;margin-bottom:-4rpx;"></image>
+              <text>送货地址：</text>
+              <text class="c-35">{{need_loc}}</text>
+            </view>
+            <view class="mt-15">
+              <image src="../../common/img/h_take_loc.png" style="width:26rpx;height:26rpx;margin-right:8rpx;margin-bottom:-4rpx;"></image>
+              <text>取货地址：</text>
+              <text class="c-35">{{take_loc}}</text>
+            </view>
+          </view>
+          <view class="dg_box_btn" style="margin-top: -4rpx">
+            <text wx:if="{{need_state == 1}}" class='help_list__un'>去帮忙</text>
+            <text wx:elif="{{need_state == 4}}" class='help_list__ed'>已完成</text>
+            <text wx:else class='help_list__ing'>进行中</text>
+          </view>
+        </view>
+      </view>
+    </view>
+     <view class="dg_box_bottom1"></view> 
+</template>

@@ -1,0 +1,18 @@
+<template name="superMarketList">
+    <view class="shop-group">
+        <image class="head" bindtap='goodsDetail' data-idx="{{idx}}" data-index="{{index}}" data-id="{{goods_id}}" src="{{base_url}}{{goods_pic}}" mode="aspectFill"></image>
+        <view class="content">
+            <view class="title">{{goods_name}}</view>
+            <view class='intro'>{{goods_intro}}</view>
+            <view class='sell_num'>已售:{{goods_stock}}</view>
+            <view class="order-box">
+                <view class="money">¥ {{goods_price}}</view>
+                <view class="btn-box">
+                    <text class="iconfont icon-jianhao" hidden="{{goods_num <= 0}}" catchtap="bindOrderNumberAddSubtract" data-state="false" data-id="{{goods_id}}" data-index="{{index}}" data-idx="{{idx}}"></text>
+                    <view class="num" hidden="{{goods_num <= 0}}">{{goods_num}}</view>
+                    <text class="iconfont icon-jiahao" catchtap="bindOrderNumberAddSubtract" data-id="{{goods_id}}" data-state="true" data-index="{{index}}" data-idx="{{idx}}"></text>
+                </view>
+            </view>
+        </view>
+    </view>
+</template>

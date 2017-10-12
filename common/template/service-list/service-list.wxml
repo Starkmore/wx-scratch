@@ -1,0 +1,42 @@
+<!--service-list.wxml-->
+<template name="service-item">
+  <view class="dg_box" data-provideid="{{provide_id}}" bindtap="serviceDetail">
+    <view class="dg_box_header">
+      <image src="{{user_avatar}}"></image>
+      <image src="../../common/img/cert.png" class="cert_icon" mode="scaleToFill"></image>
+      <view class="dg_box_name">
+        <text>{{user_name}}</text>
+        <text class="iconfont {{user_male == 1 ? 'icon-nan c-blue' : 'icon-nv c-red'}}"></text>
+      </view>
+    </view>
+    <view class="dg_box_detail">
+      <view class="dg_box_title">
+        <view style="text-align:left;width:400rpx;">
+        <text class="dg_box_title_text">{{provide_name}}</text>
+        </view>
+        <!-- <view class="c-red">¥{{price}}</view> -->
+      </view>
+      <view class="dg_box_tags">
+        <text class="dg_box_tag">{{attr_value}}</text>
+      </view>
+      <view class="dg_box_footer">
+        <view class="dg_box_time c-888" style="font-size: 24rpx;line-height: 24rpx">
+          <view class="mt-15">
+            <image src="../../common/img/newprice.png" style="width:26rpx;height:26rpx;margin-right:8rpx;margin-bottom:-4rpx;"></image>
+            <text>价格：</text>
+            <text class="f-28 c-3">¥{{price}}</text>
+          </view>
+          <view class="mt-15">
+            <image src="../../common/img/s_loc.png" style="width:26rpx;height:30rpx;margin-right:8rpx;margin-bottom:-4rpx;"></image>
+            <text>服务地址：</text>
+            <text class="c-35">{{provide_loc}}</text>
+          </view>
+        </view>
+        <view class="dg_box_btn" style="margin-top: -4rpx">
+          <text>获得服务</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="dg_box_bottom1"></view>
+</template>

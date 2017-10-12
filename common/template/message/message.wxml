@@ -1,0 +1,8 @@
+<template name="message">
+<view class="massage {{index==true? 'messageShow':'messageHidden'}}" >
+   <view class="massage_text">
+     <textarea  class="massage_textarea" maxlength="250" placeholder="在此输入留言或者回复消息(不超过250个字)"/>
+   </view>
+    <button  bindtap="messageClick">确定</button>
+</view>
+</template>

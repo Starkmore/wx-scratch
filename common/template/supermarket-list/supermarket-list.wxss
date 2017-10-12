@@ -1,0 +1,63 @@
+.shop-group{
+    display: flex;
+    width: 100%;
+    height:170rpx;
+    padding:30rpx 0;
+}
+
+.shop-group .head{
+    width: 190rpx;
+    height: 170rpx;
+    border-radius: 10rpx;
+}
+
+.shop-group .content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 15rpx;
+}
+
+.shop-group .title{
+    font-size: 32rpx;
+}
+
+.shop-group .intro{
+  width: 320rpx;
+  margin-bottom: 20rpx;
+  font-size: 22rpx;
+  color: #666;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.shop-group .sell_num{
+  font-size: 22rpx;
+  color: #666;
+}
+
+
+.shop-group .order-box{
+    display: flex;
+    justify-content: space-between;
+    width:327rpx;
+    margin-bottom: -10rpx;
+    font-size: 36rpx;
+}
+
+.shop-group .money{
+    color: #c43075;
+}
+
+.shop-group .btn-box{
+    display: flex;
+    align-items:center;
+}
+
+.shop-group .iconfont{
+    font-size: 36rpx;
+}
+
+.shop-group .iconfont,.shop-group .num{
+    margin-left: 20rpx;
+}

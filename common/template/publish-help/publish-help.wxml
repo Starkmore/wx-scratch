@@ -1,0 +1,41 @@
+<!--publish-help.wxml-->
+
+<template name="pub-help">
+
+  <view class="dg_pub_box">
+    <view class="dg_pub_box_title">
+      <view>
+        <text class="dg_pub_box_title_text">{{need_name}}</text>
+      </view>
+      <view class="c-blue f-13">{{state_str}}</view>
+    </view>
+    <view class="dg_pub_box_tags">
+      <text class="dg_pub_box_tag">{{attr_value}}</text>
+    </view>
+    <view class="dg_pub_box_footer" style="height: 120rpx">
+      <view class="dg_pub_box_time c-888 f-12">
+        <view>
+          <image src="../../common/img/newprice.png" style="width:26rpx;height:26rpx;margin-right:8rpx;margin-bottom:-4rpx;"></image>
+          <text>价格：</text>
+          <text class="c-35">¥ {{price}}</text>
+        </view>
+        <view>
+          <image src="../../common/img/h_need_loc.png" style="width:26rpx;height:26rpx;margin-right:8rpx;margin-bottom:-4rpx;"></image>
+          <text>服务地址：</text>
+          <text class="c-35">{{need_loc}}</text>
+        </view>
+        <view>
+          <image src="../../common/img/h_take_loc.png" style="width:26rpx;height:26rpx;margin-right:8rpx;margin-bottom:-4rpx;"></image>
+          <text>取货地址：</text>
+          <text class="c-35">{{take_loc}}</text>
+        </view>
+      </view>
+      <view class="dg_pub_box_btn">
+        <text wx:if="{{state == 1}}" class="f-13 mr-15" data-id="{{need_id}}" catchtap="helpEdit">编辑</text>
+          <text wx:if="{{state == 1}}" class="f-13" data-id="{{need_id}}" catchtap="helpcancle">不求助了</text>
+          <text wx:if="{{state == 2}}" class="f-13" data-id="{{need_id}}" catchtap="helpSure">确认完成</text>
+      </view>
+    </view>
+  </view>
+  <view class="dg_box_bottom1"></view>
+</template>

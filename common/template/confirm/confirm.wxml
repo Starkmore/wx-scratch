@@ -1,0 +1,33 @@
+<template name="confirm">
+    <view class="confirm-packing" hidden="{{showModel === false}}">
+        <view class="confirm-window">
+            <view class="title">{{title}}</view>
+            <view class="content">{{content}}</view>
+            <view class="footer">
+                <view class="false" catchtap="confirmFalseFunc">{{btn[0]}}</view>
+                <view class="true" catchtap="confirmTrueFunc">{{btn[1]}}</view>
+            </view>
+        </view>
+    </view>
+    <view class="dg-model" hidden="{{showModel === false}}" bindtap="showModelHandel"></view>
+</template>
+
+<template name="confirm-payment">
+    <view class="confirm-packing" hidden="{{showModel === false}}">
+        <view class="confirm-window">
+            <view class="title">{{title}}</view>
+            <view class="content content-payment">
+                <i class="iconfont icon-right"></i>
+                <view class="msg-box">
+                    <text>支付成功</text>
+                    <text>订单金额：¥ 3.00</text>
+                </view>
+            </view>
+            <view class="footer">
+                <view class="false" catchtap="confirmFalseFunc">{{btn[0]}}</view>
+                <view class="true" catchtap="confirmTrueFunc">{{btn[1]}}</view>
+            </view>
+        </view>
+    </view>
+    <view class="dg-model" hidden="{{showModel === false}}" bindtap="showModelHandel"></view>
+</template>

@@ -1,0 +1,50 @@
+<!--service-order-pub.wxml-->
+<template name="service-order-pub">
+
+  <view class="dg_box" data-serviceid="{{provide_id}}" data-orderid="{{provide_ordered_id}}" data-type="2" bindtap="provideDetail">
+    <view class="dg_box_header">
+      <image src="{{user_avatar}}"></image>
+      <image src="../../common/img/cert.png" class="cert_icon" wx:if="{{auth_state == 2}}"></image>
+      <view class="dg_box_name">
+        <text>{{user_name}}</text>
+        <text class="iconfont {{user_male == 1 ? 'icon-nan c-blue' : 'icon-nv c-red'}}"></text>
+      </view>
+    </view>
+    <view class="dg_box_detail">
+      <view class="dg_box_title">
+        <view>
+          <text class="dg_box_title_text">{{provide_name}}</text>
+        </view>
+        <view class="c-blue f-13">{{provide_state_str}}</view>
+      </view>
+      <view class="dg_box_tags">
+        <text class="dg_box_tag">{{attr_value}}</text>
+      </view>
+      <view class="dg_box_footer">
+        <view class="c-888 f-12">
+          <view>
+            <image src="../../common/img/newprice.png" style="width:26rpx;height:26rpx;margin-right:8rpx;margin-bottom:-4rpx;"></image>
+            <text>价格：</text>
+            <text class="c-35">¥{{price}}</text>
+          </view>
+          <view>
+            <image src="../../common/img/s_loc.png" style="width:26rpx;height:30rpx;margin-right:8rpx;margin-bottom:-4rpx;"></image>
+            <text>服务地址：</text>
+            <text class="c-35">{{provide_loc}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="dg_box_bottom_copy"></view>
+  <view class="dg_pub_service_btn">
+    <view class="dg_box_contact">
+    <view data-phone="{{user_phone}}" catchtap="contact" class="iconfont icon-phone-link c-blue" style="font-size:50rpx"></view>
+    </view>
+    <view class="dg_box_service_btn f-13">
+      <text data-type="2" data-id="{{provide_ordered_id}}" bindtap="provideReply" wx:if="{{ordered_state == 1}}" class="mr-15">拒接</text>
+      <text data-type="1" data-id="{{provide_ordered_id}}" bindtap="provideReply" wx:if="{{ordered_state == 1}}">确认接单</text>
+      <text data-id="{{provide_ordered_id}}" bindtap="provideFinish" wx:if="{{ordered_state == 5}}">确认完成</text>
+    </view>
+  </view>
+</template>

@@ -1,0 +1,48 @@
+<template name="fresh-items">
+<view class="user_ordinary">
+   <view class="user_help" wx:if="{{qs.user_id}}">
+       <view class="user_logo">
+          <image src="https://dgan.img.didoxy.com/{{qs.user_avatar}}" class="user_img" ></image>   
+       <!-- <image src="../../common/img/eat.png" class="user_img"  ></image>  -->
+       </view>
+       <view class="user_content">
+             <view style="font-size:30rpx;font-weight:600" class="user_intro2">{{qs.question_info}}</view>
+             <view class="user_time">{{qs.time}}</view>
+       </view>
+   </view>
+   <view class="user_admin user_admin1" wx:if="{{as.user_id}}">
+     <view class="user_logo">
+        <image src="https://dgan.img.didoxy.com/{{as.user_avatar}}" class="user_img"  ></image> 
+       </view>
+       <view class="user_content">
+             <view class="user_admin_headar"><text class="user_name">{{as.user_name}}</text> <text class="user_time time">{{as.time}}</text> <text data-phone="{{as.user_phone}}" bindtap="callClick" class="iconfont icon-dianhua"></text></view>
+             <view class="user_intro"style="font-size:32rpx;">{{as.answer_info}}</view>
+       </view>
+   </view>
+</view>
+</template>
+
+<template name="fresh-sales">
+
+<view class="user_sales" wx:if="{{user_id}}">
+      <view class="user_ordinary">
+          <view class="user_admin user_admin_line">
+              <view class="user_logo">
+                 <!-- <image src="../../img/eat.png" mode="aspectFit" style="width:220rpx;height:210rpx" ></image>  -->
+                 <image src="https://dgan.img.didoxy.com/{{user_avatar}}" class="user_img"  ></image> 
+                </view>
+                <view class="user_content">
+                      <view class="user_admin_headar "><text class="user_name">{{user_name}}</text> <text class="iconfont icon-dianhua" data-phone="{{user_phone}}" bindtap="callClick"></text></view>
+                </view>
+          </view> 
+          <view class="user_sales_text">{{question_info}}</view>
+          <view class="user_sales_text user_sales_flex">
+            <text class="user_sales_time">{{time}}</text>
+             <text data-id="{{yx_question_id}}" class="iconfont icon-liuyan" bindtap="replayClick"><text style="font-size:30rpx">回复</text></text>
+         
+          </view>
+      </view>
+</view>
+
+</template>
+

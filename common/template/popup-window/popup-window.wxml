@@ -1,0 +1,107 @@
+<template name="confirm-window">
+  <view class="popup_packing" hidden="{{showModel === false}}">
+    <view class="popup_window">
+      <view class="popup_window__hd">
+        <text class="title">{{title}}</text>
+        <image src="http://oq6s41dg1.bkt.clouddn.com/png/tanchuang_top@2x.png"></image>
+      </view>
+      <view class="popup_window__bd {{content_more ? 'more' : ''}}">
+        <text>{{content}}</text>
+      </view>
+      <view class="popup_window__ft popup_window__ft--confirm">
+        <view class="btn-confirm--lg empty" style="margin-left:50rpx" catchtap="{{btn[0].func}}">{{btn[0].name}}</view>
+        <view class="btn-confirm--lg solid" style="margin-right:50rpx" catchtap="{{btn[1].func}}">{{btn[1].name}}</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="dg-model" hidden="{{showModel === false}}" bindtap="showModelHandel"></view>
+</template>
+
+<template name="confirm-window--large">
+  <view class="popup_packing" hidden="{{showModel === false}}">
+    <view class="popup_window">
+      <view class="popup_window__hd">
+        <text class="title">{{title}}</text>
+        <image src="http://oq6s41dg1.bkt.clouddn.com/png/tanchuang_top@2x.png"></image>
+      </view>
+      <view class="popup_window__bd {{content_more ? 'more' : ''}}">
+        <text>{{content}}</text>
+      </view>
+      <view class="popup_window__ft popup_window__ft--confirm">
+        <view class="btn-confirm--lg empty" style="margin-left:50rpx" catchtap="{{btn[0].func}}">{{btn[0].name}}</view>
+        <view class="btn-confirm--lg solid" style="margin-right:50rpx" catchtap="{{btn[1].func}}">{{btn[1].name}}</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="dg-model" hidden="{{showModel === false}}" bindtap="showModelHandel"></view>
+</template>
+
+<template name="tips-window">
+  <view class="popup_packing" hidden="{{showModel === false}}">
+    <view class="popup_window">
+      <view class="popup_window__hd">
+        <text class="title">{{title}}</text>
+        <image src="http://oq6s41dg1.bkt.clouddn.com/png/tanchuang_top@2x.png"></image>
+      </view>
+      <view class="popup_window__bd {{content_more ? 'more' : ''}}">
+        <text>{{content}}</text>
+      </view>
+      <view class="popup_window__ft popup_window__ft--tips">
+        <view class="tips-btn--confirm solid" catchtap="{{btn[0].func}}">{{btn[0].name}}</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="dg-model" hidden="{{showModel === false}}" bindtap="showModelHandel"></view>
+</template>
+
+<template name="goods-detail">
+  <view class="popup_packing" style='background-color:rgba(0,0,0,0.65)' hidden="{{showModel === false}}" bindtap='closeGoods'>
+    <view class="goods__window">
+      <image src='{{goods_pic}}'></image>
+      <view class='goods_intor'>
+        <view><text>{{goods_intro}}</text></view>
+      </view>
+      <view class='goods_title'>{{goods_name}}</view>
+      <view style='display:flex;margin:0 20rpx'>
+        <view style='width:300rpx'>
+          <view>
+            <text class="iconfont icon-index-xiaoshoue"></text>
+            <text style="margin-left:20rpx;font-size:26rpx;color:#666">月销量{{deal_num}}</text>
+          </view>
+          <view style='color:#dc486f;font-size:34rpx;margin-top:20rpx'>¥{{goods_price}}</view>
+        </view>
+        <view class='goods__btn'>
+          <text data-sellid="{{seller_id}}" data-sellname="{{seller_Name}}" data-price="{{goods_price}}" data-id="{{goods_id}}" data-shopname="{{goods_name}}" catchtap="payclick" style='font-size:24rpx;background-color:{{btn_color}}'>{{btn_name}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>
+
+<!--<template name="shop-window">-->
+<!--<view class="popup_packing" hidden="{{showModel === false}}">-->
+<!--<view class="popup_window">-->
+<!--<view class="popup_window__hd popup_window__hd&#45;&#45;shop">-->
+<!--<view class="title">-->
+<!--<text>{{title}}</text>-->
+<!--<text class="sub">{{sub}}</text>-->
+<!--</view>-->
+<!--<image src="http://oq6s41dg1.bkt.clouddn.com/png/tanchuang_top@2x.png"></image>-->
+<!--</view>-->
+<!--<view class="popup_window__bd">-->
+<!--<view class="goods-list">-->
+<!--<text>脆骨高唱</text>-->
+<!--<text>X 1</text>-->
+<!--</view>-->
+<!--</view>-->
+<!--<view class="popup_window__ft popup_window__ft&#45;&#45;tips">-->
+<!--<view class="shop-btn&#45;&#45;confirm empty" catchtap="{{btn[0].func}}">{{btn[0].name}}</view>-->
+<!--</view>-->
+<!--</view>-->
+<!--</view>-->
+
+<!--<view class="dg-model" hidden="{{showModel === false}}" bindtap="showModelHandel"></view>-->
+<!--</template>-->

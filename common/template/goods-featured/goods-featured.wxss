@@ -1,0 +1,124 @@
+/* goods-featured.wxss */
+.goods{
+  display: flex;
+  flex-direction: row;
+  flex-wrap:nowrap;
+  justify-content: space-between;
+  /* border-bottom: 1rpx #E1E1E1 solid;  */
+  padding:20rpx 20rpx  0  20rpx ;
+  color: #666
+
+}
+.goods_pic{
+   /* border-radius: 5rpx; */
+   width: 200rpx;
+   /* height: 170rpx;
+   overflow: hidden; */
+
+}
+.goods_img{
+  position: relative;
+  top:20rpx;
+  width: 200rpx;
+  height: 181rpx;
+  border-radius:8rpx; 
+   /* border: 1px red solid;  */
+}
+.goods_left{
+   display: flex;
+   flex-direction: row;
+   flex-wrap:nowrap;
+   justify-content: space-between;
+   margin-left:10rpx; 
+   /* border: 1px red solid; */
+
+}
+.goods_list{
+  padding:10rpx 0 0 24rpx;
+  position: relative;
+  /* height: 165rpx; */
+  border: 1rpx  #fff solid; 
+
+}
+.goods_list_intro{
+  font-size: 22rpx;
+  color: #262626;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 450rpx;
+}
+.goods_right{
+      display: flex;
+      flex-direction: column;
+      flex-wrap:nowrap;
+      justify-content: spaflce-between;
+  
+}
+.goods_right_up{
+   border-radius: 25rpx;
+   width: 168rpx;
+   height: 54rpx;
+   line-height: 54rpx;
+   text-align: center;
+   background: #45A5DD;
+   color: #fff;
+   position: absolute; 
+   top:150rpx;
+   left:320rpx ;
+   font-size: 26rpx;
+}
+
+.goods_list_shopname{
+   display: inline-block;
+   text-align: center;
+   padding:0  15rpx 0  15rpx;
+   border: 0.5px #45A5DD   solid;
+   color: #45A5DD;
+   border-radius: 25rpx;
+   margin-left: 20rpx;
+   font-size: 22rpx;
+   /* top:5rpx */
+}
+.goods_list_link{
+  color:#45A5DD;
+  margin-left:30rpx;
+   font-size: 23rpx;
+}
+.goods_right_money{
+  color:#DC486F;
+  font-weight:600;
+  font-size: 30rpx;
+}
+.icon-index-shangjia{
+    color:#ffc03a;
+    font-size: 30rpx;
+    width: 26rpx;
+    height: 20rpx;
+    position: relative;
+    top:4rpx;
+    /* border: 1px red solid; */
+
+
+
+}
+.icon-index-xiaoshoue{
+    color: #4ec1d9;
+    font-size: 30rpx;
+
+}
+.goods_list_down1{
+  font-size: 28rpx;
+  font-weight: 600;
+  margin:7rpx 0 8rpx 0; 
+  color: #000000
+}
+.goods_list_down{
+  /* margin-bottom:7rpx; */
+}
+.dg_shop_banner{
+    position: relative;
+    top:-26rpx;
+    width: 100%;
+    height: 10rpx;
+}

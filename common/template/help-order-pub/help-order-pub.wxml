@@ -1,0 +1,62 @@
+<!--help-order-pub.wxml-->
+<template name="help-order-pub">
+  <view class="dg_box" data-needid="{{need_id}}" bindtap="jumpOrder">
+    <view class="dg_box_header">
+      <image src="{{user_avatar}}"></image>
+      <image src="../../common/img/cert.png" class="cert_icon"></image>
+      <view class="dg_box_name">
+        <text>{{user_name}}</text>
+        <text class="iconfont {{user_male == 1 ? 'icon-nan c-blue' : 'icon-nv c-red'}}"></text>
+      </view>
+    </view>
+    <view class="dg_box_detail">
+      <view class="dg_box_title">
+        <view>
+          <text class="dg_box_title_text">{{need_name}}</text>
+        </view>
+        <view wx:if="{{send_state == 1}}" class="c-blue f-13">待取货</view>
+         <view wx:if="{{send_state == 2}}" class="c-blue f-13">已取货</view>
+        <view wx:if="{{send_state == 3}}" class="c-blue f-13">已送达</view>
+        <view wx:if="{{send_state == 4}}" class="c-blue f-13">已完成</view>
+      </view>
+      <view class="dg_box_tags">
+        <text class="dg_box_tag">普通发布</text>
+      </view>
+      <view class="dg_box_footer1">
+        <view class="dg_box_time c-888 f-12">
+          <view>
+            <image src="../../common/img/newprice.png" style="width:26rpx;height:26rpx;margin-right:8rpx;margin-bottom:-4rpx;"></image>
+            <text>价格：</text>
+            <text class="c-35">¥{{price}}</text>
+          </view>
+          <view>
+            <image src="../../common/img/h_need_loc.png" style="width:26rpx;height:26rpx;margin-right:8rpx;margin-bottom:-4rpx;"></image>
+            <text>送货地址：</text>
+            <text class="c-35">{{need_loc}}</text>
+          </view>
+          <view>
+            <image src="../../common/img/h_take_loc.png" style="width:26rpx;height:26rpx;margin-right:8rpx;margin-bottom:-4rpx;"></image>
+            <text>取货地址：</text>
+            <text class="c-35">{{take_loc}}</text>
+          </view>
+        </view>
+        <!-- <view class="dg_box_help_btn">
+          <view class="iconfont icon-phone-link c-blue" data-phone="{{user_phone}}" catchtap="call" style="font-size:50rpx;width:70rpx;margin-top:5rpx"></view>
+          <view class="help_btn">
+            <text class="f-13" wx:if="{{send_state == 2||send_state == 3}}" data-needid="{{need_id}}" catchtap="handlePubBtn">确认完成</text>
+          </view>
+        </view> -->
+      </view>
+    </view>
+  </view>
+  <view class="dg_box_bottom_copy"></view>
+  <view class="dg_pub_service_btn">
+    <view class="dg_box_contact">
+      <view data-phone="{{user_phone}}" catchtap="call" class="iconfont icon-phone-link c-blue" style="font-size:50rpx"></view>
+    </view>
+    <!--wx:if="{{send_state == 2||send_state == 3}}"  -->
+    <view class="dg_box_service_btn">
+            <text class="f-13" wx:if="{{send_state == 2||send_state == 3}}" data-needid="{{need_id}}" catchtap="handlePubBtn">确认完成</text>
+    </view>
+  </view>
+</template>

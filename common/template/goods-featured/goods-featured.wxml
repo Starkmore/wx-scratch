@@ -1,0 +1,31 @@
+<template name='goods-items'>
+<view class="goods" bindtap='goodsDetail' data-idx="{{idx}}">
+  <view class="goods_left">
+      <view class="goods_pic">
+      <image src="{{goods_pic}}" mode="aspectFill"  class="goods_img"></image>
+      </view>
+      <view class="goods_list">
+           <view class="goods_list_down1">{{goods_name}}</view>
+           <view class='goods_list_intro'>{{goods_intro}}</view>
+            <view class="goods_list_down" catchtap="linkShop" data-name="{{seller_Name}}" data-id="{{seller_id}}">
+                 <text class="iconfont icon-index-shangjia"></text>
+                  <text class="goods_list_shopname">{{seller_Name}}</text>
+                  <text class="goods_list_link">></text>
+           </view>
+         
+          <view style=""><text>
+          <text class="iconfont icon-index-xiaoshoue"></text>
+          <text style="margin-left:20rpx;font-size:26rpx">月销量{{deal_num}}</text>
+          </text></view>
+          <view style="margin-bottom:30rpx" ><text class="goods_right_money" >￥{{goods_price}}</text></view>
+           <view class="goods_right_up" data-sellid="{{seller_id}}" data-sellname="{{seller_Name}}" data-price="{{goods_price}}" data-id="{{goods_id}}"  data-shopname="{{goods_name}}" catchtap="payclick">立即购买</view>   
+      </view>
+  </view>   
+</view>
+ <view class="dg_line"></view>
+
+</template>  
+
+
+
+

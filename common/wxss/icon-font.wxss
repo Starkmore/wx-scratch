@@ -1,0 +1,177 @@
+@font-face {
+  font-family: 'iconfont';  /* project id 294692 */
+  src: url('//at.alicdn.com/t/font_294692_5sfcjynirxr8jjor.eot');
+  src: url('//at.alicdn.com/t/font_294692_5sfcjynirxr8jjor.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_294692_5sfcjynirxr8jjor.woff') format('woff'),
+  url('//at.alicdn.com/t/font_294692_5sfcjynirxr8jjor.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_294692_5sfcjynirxr8jjor.svg#iconfont') format('svg');
+}
+
+.iconfont {
+    font-family:"iconfont" !important;
+    font-size:16px;
+    font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-quanzi::before{content: '\e622'}
+.icon-msg::before{content: '\e62d'}
+.icon-aboutMe::before{content: '\e9aa'}
+.icon-talkWith::before{content: '\e601'}
+.icon-invitFriends::before{content: '\e608'}
+.icon-collect::before{content: '\e600'}
+.icon-position::before{content: '\e618'}
+.icon-setting::before{content: '\e61a'}
+.icon-fabu::before{content: '\e6a0'}
+.icon-dizhi::before{content: '\e63d'}
+.icon-qianbao::before{content: '\e652'}
+.icon-shenfen::before{content: '\e605'}
+.icon-kefu::before{content: '\e607'}
+.icon-youhuiquan::before{content: '\e609'}
+.icon-write::before{content: '\e606'}
+.icon-guanyuwomen::before{content: '\e9aa'}
+
+/* 下拉 */
+.icon-xiala::before{
+  content: '\e6c3';
+  color: #45a5dd;
+  margin-left: 15rpx;
+  font-size: 26rpx;
+}
+
+/* 选中 */
+.icon-xuanzhong::before{content: '\e85d'}
+
+/* 外卖 */
+.icon-waimai::before{  content: '\e6da'}
+
+/* 技能 */
+.icon-jineng::before{  content: '\e61f'}
+
+/* 取货 */
+.icon-getThings::before{content: '\e624'}
+
+
+/* 购物车 */
+.icon-gouwuche::before{content:'\e603'}
+
+/* 加减号 */
+.icon-jianhao::before{content: '\e665'}
+.icon-jiahao::before{content: '\e639'}
+
+/* 购物车 */
+.icon-gouwuche::before{content:'\e603'}
+
+/* 圆点 */
+.icon-yuan::before{content:'\e6a1'}
+
+/* 电话联系 */
+.icon-phone-link::before{content:'\e671'}
+
+/* 扫二维码 */
+.icon-erweima-sm::before{content:'\e631'}
+.icon-erweima::before{content:'\e67e'}
+
+/* 认证加号（圆角） */
+.icon-jiahao-yuan::before{content:'\e67f'}
+
+/*认证*/
+.icon-renzheng2::before{content:'\e60f'}
+
+/*性别*/
+.icon-nv::before{content:'\e62b'}
+.icon-nan::before{content:'\e60c'}
+
+
+/*倒计时*/
+.icon-daojishi::before{content:'\e669'}
+
+/*首页箭头*/
+.icon-jiantou::before{content:'\e60d'}
+.icon-jiantou-copy::before{content:'\ea32'}
+
+/*位置*/
+.icon-dingwei::before{content:'\e604'}
+
+/*下拉*/
+.icon-youjiantou::before{content: '\e662'}
+
+/* 圆圈问号 */
+.icon-wenhao::before{content: '\e623'}
+
+/* 提现 */
+.icon-tixian::before{content: '\e655'}
+
+/*预约*/
+.icon-font08::before{content: '\e6a6'}
+
+/* 对话框 */
+.icon-duihuakuang::before{content: '\e649'}
+
+/*删除*/
+.icon-icon13::before{content:'\e627'}
+
+/* 对号 */
+.icon-right::before{content: '\e613'}
+
+/* 叉号 */
+.icon-fork::before{content: '\e687'}
+
+/* 沙漏 */
+.icon-hourglass::before{content: '\e83b'}
+
+
+/*== 个人中心
+==================================*/
+.icon-personal-1::before{content:'\e614'}
+.icon-personal-2::before{content:'\e61c'}
+.icon-personal-3::before{content:'\e65b'}
+
+.icon-personal-4::before{content:'\e654'}
+
+.icon-personal-5::before{content:'\e640'}
+.icon-personal-6::before{content:'\e610'}
+.icon-personal-7::before{content:'\e612'}
+
+.icon-personal-8::before{content:'\e6be'}
+.icon-personal-9::before{content:'\e643'}
+.icon-personal-10::before{content:'\e7df'}
+
+/* 上下线 */
+.icon-personal-shangxiaxian::before{content: '\e617'}
+
+/* 待发货订单 */
+.icon-personal-daifahuo::before{content: '\e61e'}
+
+.icon-arrow-down::before{content: '\e620'}
+
+/*首页商家  */
+.icon-index-shangjia::before{content: '\e61b'}
+/* 首页 月销量  */
+.icon-index-xiaoshoue::before{content: '\e64a'}
+
+/*提问  */
+.icon-tiwen::before{content: '\e647'}
+/*迎新留言  */
+.icon-liuyan::before{content: '\e659'}
+.icon-dianhua::before{content: '\e615'}
+.icon-dianhua2::before{content: '\e615'}
+.icon-dianhua3::before{content: '\e615'}
+.icon-heji::before{content:'\e6ef'}
+.icon-index-address::before{ content: '\e618'}
+
+.icon-xuanzhong1:before{ content:'\e626'}
+
+
+/* 活动叉号 */
+.icon-action-close:before{content: '\e666'}
+
+
+/*delete  */
+
+.icon-shanchu:before{content: '\e642'}
+
+/* notice  */
+
+.icon-tongzhigonggao:before{content: '\e658'}
