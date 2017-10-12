@@ -1,0 +1,28 @@
+<!--scratch.wxml-->
+<import src="../../common/template/popup-window/popup-window.wxml"/>
+<template is="tips-window" data="{{...tipsData2}}"></template> 
+<view style="height:370rpx">
+ <image class="scratch_img" src="http://dgan.img.didoxy.com/2017083010197544_01.png" mode="widthFix"></image>
+</view>
+<view style="height:880rpx">
+  <image class="scratch_img" src="http://dgan.img.didoxy.com/2017083010197544_02.png" mode="widthFix"></image>
+</view>
+ <view class="scratch">
+       <canvas canvas-id="myCanvas" class="myCanvas"
+            disable-scroll="false"
+            bindtouchstart="touchStart"
+            bindtouchmove="touchMove"
+            bindtouchend="touchEnd"         
+            style="width:606rpx;height:284rpx;background:url('{{img}}') no-repeat;background-size:606rpx 284rpx; ">
+        </canvas> 
+ </view>
+
+ <view class="scratch_view">
+  <image class="scratch_img" src="http://dgan.img.didoxy.com/2017083010197544_03.png" mode="widthFix"></image>
+</view>
+
+
+
+
+
+

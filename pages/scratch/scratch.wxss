@@ -1,0 +1,30 @@
+/* scratch.wxss */
+.scratch{
+  position: relative;
+  top:0;
+  left: 0;
+  width: 100%;
+  min-height:42vh;
+  margin: 0rpx   auto;
+   /* border: 1px red solid;  */
+  background: url('http://dgan.img.didoxy.com/2017083010197544_04.png')no-repeat center;
+  background-size:cover; 
+  }
+.scratch_img{
+  width: 100%;
+  font-size: 0px;
+
+  }
+.myCanvas{
+     position: absolute;
+     top:162rpx;
+     left:75rpx;  
+     border-radius:10rpx; 
+     overflow: hidden;
+      
+  }
+  .scratch_view{
+       position: relative;
+       top: -5rpx;
+       height: 942rpx;
+  }
