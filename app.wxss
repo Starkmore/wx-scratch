@@ -1,0 +1,19 @@
+/** weui引入
+===================================**/
+@import "common/wxss/weui.wxss";
+
+/** 公共样式引入
+===================================**/
+@import "common/wxss/common.wxss";
+
+/** icon字体引入
+===================================**/
+@import "common/wxss/icon-font.wxss";
+
+
+/** 组件／模版 样式引入
+===================================**/
+@import "common/template/complate-menu.wxss";
+@import "common/template/goods-featured/goods-featured.wxss";
+@import "common/template/ordinary/ordinary.wxss";
+@import "common/template/popup-window/popup-window.wxss" ;

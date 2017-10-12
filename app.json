@@ -1,0 +1,104 @@
+{
+  "pages": [
+    "pages/link/link",
+    "pages/index/index",
+    "pages/supermarket-detail/supermarket-detail",
+    "pages/help-list/help-list",
+    "pages/cert/cert",
+    "pages/cert-state/cert-state",
+    "pages/service/service",
+    "pages/personal/personal",
+    "pages/service-order/service-order",
+    "pages/personal-publish/personal-publish",
+    "pages/help-order/help-order",
+    "pages/shoporder-list/shoporder-list",
+    "pages/shoporder-waite/shoporder-waite",
+    "pages/shoporder-pay/shoporder-pay",
+    "pages/withdrawals-register/withdrawals-register",
+    "pages/withdrawals-cash/withdrawals-cash",
+    "pages/dg-envelope/dg-envelope",
+    "pages/service-detail/service-detail",
+    "pages/refund-detail/refund-detail",
+    "pages/publish-service/publish-service",
+    "pages/publish-help/publish-help",
+    "pages/service-list/service-list",
+    "pages/help-detail/help-detail",
+    "pages/shoporder-check/shoporder-check",
+    "pages/account-bind/account-bind",
+    "pages/select-addr/select-addr",
+    "pages/add-address/add-address",
+    "pages/personal-info/personal-info",
+    "pages/personal-wallet/personal-wallet",
+    "pages/dg-packet/dg-packet",
+    "pages/supermarket-list/supermarket-list",
+    "pages/personal-info-edit-name/personal-info-edit-name",
+    "pages/personal-info-edit-sex/personal-info-edit-sex",
+    "pages/service-edit/service-edit",
+    "pages/help-edit/help-edit",
+    "pages/scan/scan",
+    "pages/protocol/protocol",
+    "pages/help-order-detail/help-order-detail",
+    "pages/delivery-order/delivery-order",
+    "pages/service-order-detail/service-order-detail",
+    "pages/publish/publish",
+    "pages/order/order",
+    "pages/fresh/fresh",
+    "common/template/ordinary/ordinary",
+    "common/template/message/message",
+    "pages/whrite-information/whrite-information",
+    "pages/personal-info-edit-building/personal-info-edit-building",
+    "pages/user-list/user-list",
+    "pages/category-filtering/category-filtering",
+    "pages/system-msg/system-msg",
+    "pages/banner-img/banner-img",
+    "pages/action_luck_draw/action_luck_draw",
+    "pages/advertising/advertising",
+    "pages/advertising-list/advertising-list",
+    "pages/scratch/scratch",
+    "pages/vote/vote"
+  ],
+  "backgroundTextStyle": "dark",
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#45a5dd",
+    "navigationBarTitleText": "动感校园",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#777",
+    "selectedColor": "#45a5dd",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "common/img/footer2/home_tar.png",
+        "selectedIconPath": "common/img/footer2/home_icon.png"
+      },
+      {
+        "pagePath": "pages/fresh/fresh",
+        "text": "迎新",
+        "iconPath": "common/img/footer2/yinxin_bar.png",
+        "selectedIconPath": "common/img/footer2/yinxin_icon.png"
+      },
+      {
+        "pagePath": "pages/publish/publish",
+        "text": "发布",
+        "iconPath": "common/img/footer2/fubuicon.png",
+        "selectedIconPath": "common/img/footer2/fubuicon.png"
+      },
+      {
+        "pagePath": "pages/order/order",
+        "text": "订单",
+        "iconPath": "common/img/footer2/dingdan_bar.png",
+        "selectedIconPath": "common/img/footer2/dingdan_icon.png"
+      },
+      {
+        "pagePath": "pages/personal/personal",
+        "text": "我的",
+        "iconPath": "common/img/footer2/wode_bar.png",
+        "selectedIconPath": "common/img/footer2/wode_icon.png"
+      }
+    ]
+  }
+}
